@@ -31,10 +31,11 @@ public final class HostDiscoveryService: ObservableObject {
         let newBrowser = NWBrowser(for: .bonjour(type: "_apkbridge._tcp", domain: nil), using: params)
 
         newBrowser.browseResultsChangedHandler = { [weak self] results, _ in
-            guard let self = self else { return }
             for result in results {
                 if case .service(let name, _, _, _) = result.endpoint {
-                    self.resolveEndpoint(result.endpoint, serviceName: name)
+                    Task { @MainActor [weak self] in
+                        self?.resolveEndpoint(result.endpoint, serviceName: name)
+                    }
                 }
             }
         }
