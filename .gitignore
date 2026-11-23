@@ -1,0 +1,10 @@
+# Build & IDE artifacts
+build/
+.gradle/
+local.properties
+*.xcodeproj
+*.xcworkspace
+DerivedData/
+.DS_Store
+*.ipa
+*.apk

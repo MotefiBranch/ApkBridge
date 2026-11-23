@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ApkBridge Host</string>
+    <string name="accessibility_label">ApkBridge Touch &amp; Key Input</string>
+    <string name="accessibility_description">Enables remote touch, swipe, and keyboard input from your iOS ApkBridge Hub over local Wi-Fi.</string>
+</resources>
