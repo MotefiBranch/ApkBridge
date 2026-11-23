@@ -12,8 +12,6 @@ targets:
       - path: ApkBridgeHub
         excludes:
           - Info.plist
-    info:
-      path: ApkBridgeHub/Info.plist
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.apkbridge.hub
@@ -21,3 +19,5 @@ targets:
         CURRENT_PROJECT_VERSION: "1"
         SWIFT_VERSION: "5.9"
         TARGETED_DEVICE_FAMILY: "1,2"
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: ApkBridgeHub/Info.plist
